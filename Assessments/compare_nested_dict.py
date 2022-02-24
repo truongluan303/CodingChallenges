@@ -3,28 +3,7 @@ import unittest
 
 
 def get_diff(person1: dict, person2: dict) -> dict:
-    result = dict()
-    
-    for key, val in person1.items():
-        
-        if key not in person2:
-            result[key] = [val, None]
-            
-        elif val != person2[key]:
-            
-            if type(val) is dict:
-                result[key] = get_diff(val, person2[key])
-            
-            else:
-                result[key] = [val, person2[key]]
-            
-    
-    for key, val in person2.items():
-        
-        if key not in person1:
-            result[key] = [None, val]
-            
-    return result
+    """"""
 
 
 
