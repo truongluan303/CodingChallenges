@@ -10,7 +10,7 @@
  */
 
 #include <iostream>
-#include <cassert> 
+#include <cassert>
 
 
 using namespace std;

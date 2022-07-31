@@ -58,7 +58,7 @@ class BST {
         }
         else {
             Node current = root;
-            
+
             while (true) {
 
                 if (val <= current.getVal()) {
@@ -121,7 +121,7 @@ class BST {
 
 
     public ArrayList<ArrayList<Integer>> levelOrderTraversal(Node root) {
-        
+
         Queue<Node> queue = new LinkedList<Node>();
         queue.add(root);
 
@@ -134,7 +134,7 @@ class BST {
             for (int i = 0; i < size; i++) {
                 Node temp = queue.remove();
                 subarr.add(temp.getVal());
-                
+
                 if (temp.getLeft() != null) {
                     queue.add(temp.getLeft());
                 }
@@ -153,47 +153,39 @@ class BST {
         private int val;
         private Node left;
         private Node right;
-    
+
         Node(int val) {
             this(val, null, null);
         }
-    
+
         Node(int val, Node left, Node right) {
             this.val = val;
             this.left = left;
             this.right = right;
         }
-    
+
         public void setVal(int val) {
             this.val = val;
         }
-    
+
         public void setLeft(Node left) {
             this.left = left;
         }
-    
+
         public void setRight(Node right) {
             this.right = right;
         }
-    
+
         public int getVal() {
             return val;
         }
-    
+
         public Node getLeft() {
             return left;
         }
-    
+
         public Node getRight() {
             return right;
         }
     }
 }
-
-
-
-
-
-
-
-

@@ -38,26 +38,25 @@ Example:
 """
 
 
-
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 def solve(arr):
     i = j = 1
-    
+
     while i < len(arr):
         j += 1
 
         last = i + j - 1
         first = i
-        
+
         if last <= len(arr) - 1:
             while first < last:
                 arr[first], arr[last] = arr[last], arr[first]
                 first += 1
                 last -= 1
         i += j
-     
-     
+
+
 solve(arr)
 print(arr)

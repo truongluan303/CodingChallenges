@@ -1,61 +1,50 @@
+LEFT = {"(", "[", "{"}
+RIGHT = {")", "]", "}"}
 
-LEFT = {'(', '[', '{'}
-RIGHT = {')', ']', '}'}
-
-PAREN_MAP = {'(':')', '{':'}', '[':']'}
-
+PAREN_MAP = {"(": ")", "{": "}", "[": "]"}
 
 
 def is_balanced_smiley(s: str) -> bool:
-	
-	icons_removed = s.replace(':)', '').replace(':(', '')
 
-	return is_balanced_paren(s) or is_balanced_paren(icons_removed)		
+    icons_removed = s.replace(":)", "").replace(":(", "")
 
-
-
+    return is_balanced_paren(s) or is_balanced_paren(icons_removed)
 
 
 def is_balanced_paren(s: str) -> bool:
 
-	stack = list()
+    stack = list()
 
-	for c in s:
+    for c in s:
 
-		if c in LEFT:
-			stack.append(c)
+        if c in LEFT:
+            stack.append(c)
 
-		elif c in RIGHT:
+        elif c in RIGHT:
 
-			if len(stack) == 0:
-				return False
+            if len(stack) == 0:
+                return False
 
-			left = stack.pop()
+            left = stack.pop()
 
-			if PAREN_MAP[left] != c:
-				return False
+            if PAREN_MAP[left] != c:
+                return False
 
-	return len(stack) == 0	
-
-
-
-
-
+    return len(stack) == 0
 
 
 def main() -> None:
-	
-	s = ['(())', '()()', ':)', ':((', '(:)', '(i am sad :()', '([]:)', ':)())']
-	out = [True, True, True, False, True, True, True, False]
 
-	for i in range(len(s)):
-		if is_balanced_smiley(s[i]) != out[i]:
-			print('\nFAILED')
-			return
+    s = ["(())", "()()", ":)", ":((", "(:)", "(i am sad :()", "([]:)", ":)())"]
+    out = [True, True, True, False, True, True, True, False]
 
-	print('\nPASSED')
-	
+    for i in range(len(s)):
+        if is_balanced_smiley(s[i]) != out[i]:
+            print("\nFAILED")
+            return
 
-	
+    print("\nPASSED")
+
+
 if __name__ == "__main__":
-	main() 
+    main()

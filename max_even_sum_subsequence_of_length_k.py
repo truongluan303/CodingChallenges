@@ -1,4 +1,4 @@
-'''
+"""
 Example:
 
 arr = [4, 2, 6, 7, 8], k = 3
@@ -10,11 +10,11 @@ arr = [7, 7, 7], k = 1
 => output = -1
 we can only pick 1 number and none of them are even.
 Therefore, return -1
-'''
+"""
 
 
 def solution(arr, k):
-    
+
     if len(arr) < k:
         return -1
 
@@ -26,7 +26,7 @@ def solution(arr, k):
     result = 0
     i = 0
     j = 0
-    
+
     while k > 0:
 
         if k % 2 == 0:
@@ -56,11 +56,8 @@ def solution(arr, k):
                 k -= 1
             else:
                 return -1
-        
+
     return result
-
-
-
 
 
 if __name__ == "__main__":

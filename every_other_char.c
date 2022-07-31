@@ -1,6 +1,6 @@
 /*
-Implement a C function that takes a null-terminated string and returns 
-a new heap-allocated null-terminated string containing every other 
+Implement a C function that takes a null-terminated string and returns
+a new heap-allocated null-terminated string containing every other
 character from original string (e.g., “house” -> “hue”).
 */
 #include <stdlib.h>

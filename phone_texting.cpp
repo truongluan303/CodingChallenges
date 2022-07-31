@@ -44,7 +44,7 @@ void helper(
 ) {
   // If the current depth equals the length of number string,
   // then the word is complete.
-  // So add the word to the vector 
+  // So add the word to the vector
   // if the word is found in `all_words_collected`
   if (depth == number_string.length()) {
     if (all_words_collected.find(current_str) != all_words_collected.end()) {
@@ -88,22 +88,22 @@ int main() {
   return 0;
 }
 
-/* 
+/*
     The solution that I used is to get all possible permutations of the letters and then
   check if that each of them is contained in the words list. Those that are found in the
   word list will then be added to the result vector.
 
     My solution involved using recursion. And if we look at the base case on line 53, we
   see that it will stop when `depth` is equal to the size of `number_string`. On line
-  64, we also see a for loop looping through each letter in the vector of letters 
+  64, we also see a for loop looping through each letter in the vector of letters
   corresponded to a digit and in that loop we are recursively calling `helper`. But since
   the size of these letters vectors are fixed (we see that they are always either at size
   3 or 4), this loop does not raise the overall time complexity.
 
     Another thing is that we also do look up in `all_words_collected` on line 54. Since
   `all_words_collected` is an unordered set, the look up time is constant. So this also
-  does not raise the time complexity. 
-  
-    So we conclude that the time complexity for this solution is LINEAR, or O(n) with n 
+  does not raise the time complexity.
+
+    So we conclude that the time complexity for this solution is LINEAR, or O(n) with n
   being the size of `number_string`.
 */

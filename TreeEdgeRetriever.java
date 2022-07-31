@@ -73,7 +73,7 @@ public class TreeEdgeRetriever
 
         while (!queue.isEmpty()) {
             int size = queue.size();
-            
+
             for (int i = 0; i < size; i++) {
                 Node current = queue.remove();
 
@@ -98,9 +98,9 @@ public class TreeEdgeRetriever
 
         return Result.from(left, right, bottom);
     }
-    
 
-    
+
+
     // This method is to help you test your code in the IDE you are working with. The test cases won't run this method
     // Grading will not happen on the basis of contents of this method.
     public static void main(String args[]) {

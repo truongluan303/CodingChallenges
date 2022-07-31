@@ -22,9 +22,8 @@ def merge_intervals(intervals: list) -> list:
     return stack
 
 
-
 def main():
-    intervals = [[7,7], [2,3], [6,11], [1,2]]
+    intervals = [[7, 7], [2, 3], [6, 11], [1, 2]]
     print(merge_intervals(intervals))
 
 

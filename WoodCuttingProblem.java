@@ -39,7 +39,7 @@ public class WoodCuttingProblem {
 
 
         for (int i = cuts.size() - 1; i >= 0; i--) {
-            
+
             for (int j = i + 1; j < cuts.size(); j++) {
 
                 for (int k = i + 1; k < j; ++k) {

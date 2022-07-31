@@ -1,8 +1,7 @@
-
 def canMakeTriangle(arr):
 
     result = list()
-    
+
     for i in range(len(arr) - 2):
 
         a = arr[i]
@@ -20,10 +19,6 @@ def canMakeTriangle(arr):
             result.append(0)
 
     return result
-
-
-
-
 
 
 def main():

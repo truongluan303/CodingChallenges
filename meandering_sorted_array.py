@@ -1,8 +1,8 @@
 def meandering_sort(arr: list) -> list:
-    '''
+    """
     a meandering sorted array has the form:
     [first largest, first smallest, second largest, second smallest, ...]
-    '''
+    """
     arr.sort()
     result = list()
 
@@ -19,8 +19,6 @@ def meandering_sort(arr: list) -> list:
         result.append(arr[l])
 
     return result
-
-
 
 
 def main():

@@ -1,4 +1,3 @@
-
 def get_digits_sum(n):
     result = 0
 
@@ -9,11 +8,8 @@ def get_digits_sum(n):
     return result
 
 
-
-
 def main():
     print(get_digits_sum(1239))
-
 
 
 if __name__ == "__main__":
