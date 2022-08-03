@@ -80,7 +80,7 @@ int main()
 {
     vector<int> arr { 2, 3, 5, 1, 8, 9, 2 };
     int k = 3;
-    
+
     assert(minimum_group(arr, k) == 3);
 
     cout << "Passed" << endl;
