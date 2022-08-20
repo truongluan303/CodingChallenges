@@ -18,9 +18,10 @@ where one node is a gateway.
         you can make sure there are no duplicates.
 
     * The `x` and `y` coordinates can be generated with a random
-        number in range [0, num_nodes * 2).
+        number in range [0, num_nodes * 2). It is ok to have 2 nodes
+        at the same location.
 
-    * The gateway is selected randomly along all the nodes (all nodes
+    * The gateway is selected randomly among all the nodes (all nodes
         must have the same chance of being a gateway). The node that
         is chosen to be the gateway will have the `is_gw` flag set.
 
